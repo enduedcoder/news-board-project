@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Button from '../button/Button';
 import './Card.css';
 
-export default function Card() {
+interface CardPropsType {
+  children: ReactNode;
+}
+
+export default function Card({ children }: CardPropsType) {
   return (
     <div className="card-item">
-      <h1>Board name</h1>
+      <h1>{children}</h1>
       <Button>View News</Button>
     </div>
   );
