@@ -8,8 +8,11 @@ function App() {
 
   return (
     <LoginContext.Provider value={{ email, setEmail }}>
-      <p>In app: {email}</p>
-      <Login />
+      <div>
+        <p>In app: {email}</p>
+
+        <Login />
+      </div>
     </LoginContext.Provider>
   );
 }

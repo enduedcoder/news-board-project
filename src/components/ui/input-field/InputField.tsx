@@ -6,7 +6,6 @@ export default function InputField() {
 
   return (
     <>
-      <p>{email}</p>
       <label htmlFor="email">
         <b>Enter Email</b>
       </label>
