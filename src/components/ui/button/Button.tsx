@@ -3,10 +3,18 @@ import './Button.css';
 
 interface ButtonProps {
   children: ReactNode;
+  handleClick?: React.MouseEventHandler;
 }
 
-const Button = (props: ButtonProps): JSX.Element => {
-  return <button className="btn">{props.children}</button>;
+const Button = ({
+  children,
+  handleClick,
+}: ButtonProps): JSX.Element => {
+  return (
+    <button className="btn" onClick={handleClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
