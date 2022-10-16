@@ -14,13 +14,15 @@ export default function BoardList() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    setIsLoading(true);
+
     fetch('http://localhost:8080/v1/board')
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setBoardList(data);
+        setIsLoading(false);
       });
   }, []);
 
@@ -36,7 +38,11 @@ export default function BoardList() {
 
   return (
     <>
-      <section className="board-content">{renderBoardList}</section>
+      {isLoading && <p>Loading Data</p>}
+
+      {boardList && (
+        <section className="board-content">{renderBoardList}</section>
+      )}
     </>
   );
 }
