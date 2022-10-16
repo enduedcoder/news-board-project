@@ -8,6 +8,7 @@ import './App.css';
 import LoginContext from './context/LoginContext';
 import Login from './components/login/Login';
 import BoardList from './components/board-list/BoardList';
+import NewsList from './components/news-list/NewsList';
 
 function App() {
   const [email, setEmail] = useState('');
@@ -17,7 +18,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/boards" element={<BoardList />} />
+          <Route path="/board" element={<BoardList />} />
+          <Route path="board/:boardId/news" element={<NewsList />} />
         </Routes>
       </Router>
     </LoginContext.Provider>
