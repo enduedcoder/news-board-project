@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import './Button.css';
 
 interface ButtonProps {
   children: ReactNode;
-  onButtonClick?: React.MouseEventHandler;
+  onButtonClick?: React.FormEventHandler<HTMLButtonElement>;
 }
 
 const Button = ({
