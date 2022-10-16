@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '../ui/card/Card';
 import './BoardList.css';
 
@@ -10,6 +11,7 @@ interface BoardType {
 export default function BoardList() {
   const [isLoading, setIsLoading] = useState(false);
   const [boardList, setBoardList] = useState<BoardType[]>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:8080/v1/board')
@@ -22,8 +24,14 @@ export default function BoardList() {
       });
   }, []);
 
+  const handleClick = (board: BoardType) => {
+    navigate(`/board/${board.id}/news`);
+  };
+
   const renderBoardList = boardList?.map((board, i) => (
-    <Card key={board.id}>{board.name}</Card>
+    <Card key={board.id} onButtonClick={() => handleClick(board)}>
+      {board.name}
+    </Card>
   ));
 
   return (
