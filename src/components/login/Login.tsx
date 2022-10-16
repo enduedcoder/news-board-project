@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
 
     localStorage.setItem('userEmail', email);
-    navigate('/boards');
+    navigate('/board');
   };
 
   return (
