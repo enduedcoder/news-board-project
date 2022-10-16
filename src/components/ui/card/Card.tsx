@@ -4,13 +4,17 @@ import './Card.css';
 
 interface CardPropsType {
   children: ReactNode;
+  onButtonClick?: React.FormEventHandler<HTMLButtonElement>;
 }
 
-export default function Card({ children }: CardPropsType) {
+export default function Card({
+  children,
+  onButtonClick,
+}: CardPropsType) {
   return (
     <div className="card-item">
       <h1>{children}</h1>
-      <Button>View News</Button>
+      <Button onButtonClick={onButtonClick}>View News</Button>
     </div>
   );
 }
