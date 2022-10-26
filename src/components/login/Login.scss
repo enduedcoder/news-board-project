@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  max-width: 50rem;
+  height: 600px;
+  background: var(--theme-form);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 20rem;
+  margin-top: 5rem;
+  padding: 2rem 20px;
+}
+
+.container {
+  h2 {
+    color: var(--light-theme-font-color);
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-2);
+    margin-bottom: 40px;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 48rem) {
+  .container {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
