@@ -10,8 +10,14 @@ import { API_BASE_URL, NewsDetailsType } from '../utils';
 interface AddNewsType {
   isEdit?: boolean;
   data?: NewsDetailsType;
-  addNews: (arg: any) => void;
-  onToggleForm?: (arg: any) => void;
+  addNews: (arg: NewsDetailsType) => void;
+  onToggleForm?: (arg: boolean) => void;
+}
+
+interface RequestOptionsType {
+  method?: string;
+  headers?: { 'Content-Type': string };
+  body?: string;
 }
 
 export default function AddNews({
@@ -32,7 +38,7 @@ export default function AddNews({
   const EditBodyObject: NewsDetailsType = useMemo(() => {
     return {};
   }, []);
-  const requestOptions: any = {};
+  const requestOptions: RequestOptionsType = {};
 
   useEffect(() => {
     if (isEdit) {
@@ -75,7 +81,7 @@ export default function AddNews({
     isEdit,
   ]);
 
-  const submit = (e: any) => {
+  const submit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (isEdit) {
