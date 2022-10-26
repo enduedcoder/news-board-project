@@ -1,0 +1,13 @@
+button {
+  color: var(--light-theme-font-color);
+  background-color: var(--theme);
+  padding: 0.5rem 20px;
+  border-radius: 10px;
+  border: 2px solid var(--light-button-border-color);
+  width: 10rem;
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
