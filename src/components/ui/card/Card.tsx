@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Button from '../button/Button';
-import './Card.css';
+import './Card.scss';
 
 interface CardPropsType {
   children: ReactNode;
