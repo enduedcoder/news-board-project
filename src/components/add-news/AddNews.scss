@@ -1,0 +1,32 @@
+.form-container {
+  margin: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 80%;
+  padding: 1.5rem 10px;
+  background: #5e5e5e;
+
+  label,
+  input,
+  textarea {
+    color: var(--text-font-color);
+  }
+
+  ::placeholder {
+    color: #373535;
+  }
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.add-btn,
+.cancel-btn {
+  margin: 0.5rem;
+}
+
+.cancel-btn,
+.delete-btn {
+  background-color: #7e1a1a;
+}
