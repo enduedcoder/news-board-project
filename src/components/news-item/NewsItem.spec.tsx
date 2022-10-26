@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { NewsDetailsType } from '../utils';
 import NewsItem from './NewsItem';
 
 const WRAPPER_TEST_ID_SELECTOR = 'news-card-test-id';
@@ -16,7 +17,8 @@ const defaultTestProps = {
       title: 'some title',
     },
   ],
-  onDeleteNews: (arg: any) => {
+
+  onDeleteNews: (arg: NewsDetailsType) => {
     console.log(arg);
   },
 };

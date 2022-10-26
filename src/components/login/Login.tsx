@@ -10,7 +10,7 @@ export default function Login() {
   const inputRef = useRef<HTMLInputElement>(null!);
   const navigate = useNavigate();
 
-  const handleLogin = (e: any) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (inputRef?.current?.value.length > 0) {

@@ -54,7 +54,7 @@ export default function NewsList() {
     }
   };
 
-  const toggleForm = (value: any) => {
+  const toggleForm = (value: boolean) => {
     setShowAddNewsForm(!value);
   };
 
