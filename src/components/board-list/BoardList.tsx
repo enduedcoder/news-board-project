@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../ui/card/Card';
-import './BoardList.css';
+import './BoardList.scss';
+import { API_BASE_URL } from '../utils';
 
 interface BoardType {
   id: string;
@@ -16,7 +17,7 @@ export default function BoardList() {
   useEffect(() => {
     setIsLoading(true);
 
-    fetch('http://localhost:8080/v1/board')
+    fetch(`${API_BASE_URL}/board`)
       .then((response) => {
         return response.json();
       })

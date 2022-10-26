@@ -4,3 +4,9 @@
   justify-content: space-around;
   text-align: center;
 }
+
+@media screen and (max-width: 48rem) {
+  .board-content {
+    flex-direction: column;
+  }
+}
