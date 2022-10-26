@@ -1,0 +1,14 @@
+textarea {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 25rem;
+  color: var(--light-theme-font-color);
+  padding: 0.25rem 10px;
+  height: 2.5rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  margin: 1.5rem 0 1.5rem 0;
+  resize: none;
+}
