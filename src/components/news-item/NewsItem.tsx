@@ -83,7 +83,7 @@ export default function NewsItem({ newsData, onDeleteNews }: News) {
     setEditing(false);
   };
 
-  const toggleForm = (value: any) => {
+  const toggleForm = (value: boolean) => {
     setEditing(!value);
   };
 
