@@ -6,7 +6,7 @@ export type LoginContextType = {
 };
 
 export const LoginContext = React.createContext<LoginContextType>({
-  email: 'test@gmail.com',
+  email: 'admin@gmail.com',
   setEmail: () => {},
 });
 
