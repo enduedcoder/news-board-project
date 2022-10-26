@@ -1,0 +1,25 @@
+.newslist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  .news-content {
+    margin-top: 2.5rem;
+    width: 58rem;
+  }
+
+  .add-news-btn {
+    background: #5ab81b;
+    color: var(--text-font-color);
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .newslist-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
