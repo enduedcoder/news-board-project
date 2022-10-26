@@ -1,21 +1,47 @@
 import React from 'react';
-import { useLoginContext } from '../../../hooks/LoginContextHook';
+import './InputField.scss';
 
-export default function InputField() {
-  const { email, setEmail } = useLoginContext();
+interface InputFieldProps {
+  id: string;
+  inputLabel?: string;
+  inputName: string;
+  inputPlaceholder: string;
+  ref?: React.Ref<HTMLInputElement>;
+  inputValue?: string;
+  onInputChange?: React.FormEventHandler<HTMLInputElement>;
+}
 
-  return (
+const InputField = React.forwardRef<
+  HTMLInputElement,
+  InputFieldProps
+>(
+  (
+    {
+      id,
+      inputLabel = 'Enter Field Data',
+      inputName,
+      inputPlaceholder,
+      inputValue = '',
+      onInputChange,
+    },
+    ref
+  ) => (
     <>
       <label htmlFor="email">
-        <b>Enter Email</b>
+        <b>{inputLabel}</b>
       </label>
       <input
-        name="email"
-        placeholder="Enter email"
+        data-testid="input-test-id"
+        defaultValue={inputValue}
+        id={id}
+        name={inputName}
+        onChange={onInputChange}
+        placeholder={inputPlaceholder}
+        ref={ref}
         type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
     </>
-  );
-}
+  )
+);
+
+export default InputField;
